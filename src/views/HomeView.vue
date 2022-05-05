@@ -1,18 +1,63 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <line-chart :data="chartData" :colors="['#b00','#666']" :discrete="true"></line-chart>
+    <br>
+    <br>
+    <pie-chart :data="data" :donut="true" ></pie-chart>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      chartData: [
+        {
+          name:"Josue",
+          data: {
+            '2010-12-31': 10,
+            '2011-12-31': 5,
+            '2012-12-31': 15,
+            '2013-12-31': 3,
+            '2014-12-31': 30,
+            '2015-12-31': 10,
+            '2016-12-31': 5,
+            '2017-12-31': 46,
+            '2018-12-31': 3,
+            '2019-12-31': 30,
+          }
+        },
+        {
+          name:"Julio",
+          data:{
+            '2010-12-31': 20,
+            '2011-12-31': 61,
+            '2012-12-31': 15,
+            '2013-12-31': 2,
+            '2014-12-31': 10,
+            '2015-12-31': 40,
+            '2016-12-31': 5,
+            '2017-12-31': 36,
+            '2018-12-31': 3,
+            '2019-12-31': 20,
+          }
+        }
+      ],
+      data: {
+            '2010-12-31': 10,
+            '2011-12-31': 5,
+            '2012-12-31': 15,
+            '2013-12-31': 3,
+            '2014-12-31': 30,
+            '2015-12-31': 10,
+            '2016-12-31': 5,
+            '2017-12-31': 46,
+            '2018-12-31': 3,
+            '2019-12-31': 30,
+          }
+    }
   }
 }
 </script>
